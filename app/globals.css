@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FAF9F7;
+    color: #1A1A18;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .input-base {
+    @apply h-11 w-full px-4 rounded-xl border border-border bg-bg-elevated text-text-primary placeholder-text-tertiary focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all;
+  }
+
+  .primary-btn {
+    @apply h-11 px-5 rounded-xl bg-accent text-white font-medium hover:bg-accent-hover active:bg-accent-active transition-colors disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center justify-center gap-2;
+  }
+
+  .secondary-btn {
+    @apply h-11 px-5 rounded-xl border border-border bg-bg-elevated text-text-primary font-medium hover:bg-bg-secondary transition-colors inline-flex items-center justify-center gap-2;
+  }
+
+  .ghost-btn {
+    @apply h-11 px-5 rounded-xl text-text-primary font-medium hover:bg-bg-secondary transition-colors inline-flex items-center justify-center gap-2;
+  }
+
+  .danger-btn {
+    @apply h-11 px-5 rounded-xl bg-status-danger text-white font-medium hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-2;
+  }
+
+  .icon-btn {
+    @apply h-10 w-10 rounded-xl flex items-center justify-center hover:bg-bg-secondary transition-colors text-text-secondary hover:text-text-primary;
+  }
+
+  .card {
+    @apply bg-bg-elevated border border-border rounded-xl;
+  }
+}
