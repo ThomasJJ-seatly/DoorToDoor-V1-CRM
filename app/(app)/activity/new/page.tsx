@@ -60,6 +60,7 @@ export default async function NewActivityPage({
           suburb: existingEntry?.suburb ?? '',
           doors_knocked: existingEntry?.doors_knocked ?? 0,
           conversations: existingEntry?.conversations ?? 0,
+          presentations: existingEntry?.presentations ?? 0,
           sales_count: existingEntry?.sales_count ?? actualSalesCount,
           hours_worked: existingEntry?.hours_worked ?? 0,
           notes: existingEntry?.notes ?? '',
